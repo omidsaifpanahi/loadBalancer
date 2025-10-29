@@ -1,3 +1,5 @@
+// file_path : config/index.js
+
 module.exports  = {
   SERVER_PORT: process.env.SERVER_PORT || 3000,
   REDIS: {
@@ -7,5 +9,5 @@ module.exports  = {
   },
   ADMIN_PASSWORD_HASH: process.env.ADMIN_PASSWORD_HASH || '$2b$10$X9K3YqH7qH.Z5QZ4Z5QZ5O', // default: "admin123"
   SESSION_SECRET: process.env.SESSION_SECRET || 'your-secret-key-change-this',
-  SERVER_TIMEOUT: 45000, // سروری که بیش از ۴۵ ثانیه heartbeat نداشته مرده
+  SERVER_TIMEOUT: 45000,
 };

@@ -1,11 +1,13 @@
+// file_path: routes/admin.routes.js
+
 const express = require('express');
 const router  = express.Router();
 const bcrypt  = require('bcrypt');
 
 const CONFIG = require("../config");
-const requireAuth = require('./middleware/requireAuth');
-const redisService = require('./utilities/redisService').getInstance();
-const stateManagement = require('./stateManagement');
+const requireAuth = require('../middleware/requireAuth');
+const redisService = require('../utilities/redisService').getInstance();
+const stateManagement = require('../stateManagement');
 
 router.post('/login', async (req, res) => {
   const { password } = req.body;

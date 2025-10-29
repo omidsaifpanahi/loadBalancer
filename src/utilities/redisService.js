@@ -38,13 +38,6 @@ class RedisService {
 
   }
 
-  removeErrorHandlers() {
-    let client = this.redisClient;
-    client.off('error', this.errorHandler);
-    client.off('connect', this.connectHandler);
-    client.off('reconnecting', this.reconnectingHandler);
-  }
-
   async connect() {
     let client = this.redisClient;
       if (client.status === 'ready' || client.status === 'connecting') {

@@ -1,10 +1,12 @@
+// file_path : utilities/helpers.js
+const stateManagement = require('../stateManagement');
 
 function selectServer(servers, strategy) {
   if (!servers || servers.length === 0) {
     return null;
   }
 
-  strategyStats[strategy]++;
+  stateManagement.strategyStats[strategy]++;
 
   switch (strategy) {
     case 'leastPeers':
@@ -21,8 +23,8 @@ function selectServer(servers, strategy) {
       return servers[Math.floor(Math.random() * servers.length)];
 
     case 'roundRobin':
-      const server = servers[roundRobinIndex % servers.length];
-      roundRobinIndex++;
+      const server = servers[stateManagement.roundRobinIndex % servers.length];
+      stateManagement.roundRobinIndex++;
       return server;
 
     default:

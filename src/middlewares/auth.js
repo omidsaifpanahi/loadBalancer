@@ -1,3 +1,5 @@
+// file_path: middlewares/auth.js
+
 function requireAuth(req, res, next) {
   if (req.session && req.session.isAdmin) {
     return next();

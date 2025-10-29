@@ -1,3 +1,4 @@
+// file_path: logic.js
 let isLoggedIn = false;
 let currentStrategy = '';
 

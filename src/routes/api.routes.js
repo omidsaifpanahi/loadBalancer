@@ -1,11 +1,11 @@
+// file_path: routes/api.routes.js
+
 const express = require('express');
 const router = express.Router();
 
-const stateManagement = require("../stateManagement");
-
-const redisService = require('./utilities/redisService').getInstance();
-const helpers = require('./helpers');
-const stateManagement = require('./stateManagement');
+const redisService = require('../utilities/redisService').getInstance();
+const helpers = require('../utilities/helpers');
+const stateManagement = require('../stateManagement');
 
 router.get('/server', async (req, res) => {
   try {

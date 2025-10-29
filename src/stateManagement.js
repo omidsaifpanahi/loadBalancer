@@ -1,3 +1,4 @@
+// file_path : stateManagement.js
 module.exports = {
   currentStrategy : 'leastPeers',
   roundRobinIndex : 0 ,
