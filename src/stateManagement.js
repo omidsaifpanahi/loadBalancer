@@ -7,5 +7,6 @@ module.exports = {
     leastRooms : 0,
     roundRobin : 0,
     random     : 0,
+    fillToCapacity: 0,
   }
 };

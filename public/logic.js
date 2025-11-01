@@ -155,7 +155,8 @@ function translateStrategy(strategy) {
     'leastPeers': 'کمترین کاربر',
     'leastRooms': 'کمترین اتاق',
     'roundRobin': 'نوبتی',
-    'random': 'تصادفی'
+    'random': 'تصادفی',
+    'fillToCapacity': 'پر کردن سرور تا ظرفیت'
   };
   return translations[strategy] || strategy;
 }

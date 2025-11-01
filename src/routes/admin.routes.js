@@ -58,7 +58,7 @@ router.get('/servers', requireAuth, async (req, res) => {
 router.post('/strategy', requireAuth, (req, res) => {
   const { strategy } = req.body;
 
-  const validStrategies = ['leastPeers', 'leastRooms', 'roundRobin', 'random'];
+  const validStrategies = ['leastPeers', 'leastRooms', 'roundRobin', 'random', 'fillToCapacity'];
 
   if (!validStrategies.includes(strategy)) {
     return res.status(400).json({
